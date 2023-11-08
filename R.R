@@ -6,7 +6,12 @@ nc <- 97 #ingresar porcentaje
 shiny::runGitHub(repo="semilleroApps", user="fhernanb", sub="samplesize")
 #shiny::runGitHub(repo="semilleroApps", user="fhernanb", sub="goodFit_espanish")
 
-
+# Qqnorm o qqplot para ver si datios son de distribucion normal
+datos <- rnorm(100)  #ingresar datos
+qqplot(qqnorm(datos)$x, datos, main = "Gráfico Q-Q")
+# o con la linea
+qqnorm(datos, main = "Gráfico Q-Q Personalizado", xlab = "Cuantiles teóricos", ylab = "Cuantiles observados")
+abline(a = 0, b = 1, col = "red", lty = 2) 
 
 
 
