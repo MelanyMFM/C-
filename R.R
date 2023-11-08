@@ -12,6 +12,12 @@ qqplot(qqnorm(datos)$x, datos, main = "Gráfico Q-Q")
 # o con la linea
 qqnorm(datos, main = "Gráfico Q-Q Personalizado", xlab = "Cuantiles teóricos", ylab = "Cuantiles observados")
 abline(a = 0, b = 1, col = "red", lty = 2) 
+# Prueba anderson darling
+library(nortest)
+contenido <- c(510, 492, 494, 498, 492, 496, 502, 491, 507, 496) #ingresar
+ad.test(contenido) # si p es mayor a 0.05 bien, si es menor mal
+
+
 
 
 
