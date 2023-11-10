@@ -1,23 +1,21 @@
-# Tamaño de muestra para estimar proporcion
-nc <- 97 #ingresar porcentaje
+
 
 
 # Tamaño de muestra para diferentes niveles de confianza
 shiny::runGitHub(repo="semilleroApps", user="fhernanb", sub="samplesize")
 #shiny::runGitHub(repo="semilleroApps", user="fhernanb", sub="goodFit_espanish")
 
-# Qqnorm o qqplot para ver si datios son de distribucion normal
-datos <- rnorm(100)  #ingresar datos
-qqplot(qqnorm(datos)$x, datos, main = "Gráfico Q-Q")
-# o con la linea
-qqnorm(datos, main = "Gráfico Q-Q Personalizado", xlab = "Cuantiles teóricos", ylab = "Cuantiles observados")
-abline(a = 0, b = 1, col = "red", lty = 2) 
+
+
+
+# Qqnorm para ver si graficos siguen la distribucion normal
+x <- c(45, 57, 78, 35, 49, 87, 70, 39, 55, 69) #ingresar
+qqnorm(x)
+qqline(x)
 # Prueba anderson darling
 library(nortest)
 contenido <- c(510, 492, 494, 498, 492, 496, 502, 491, 507, 496) #ingresar
 ad.test(contenido) # si p es mayor a 0.05 bien, si es menor mal
-
-
 
 
 
